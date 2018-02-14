@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    tun:
+        build:
+            context: ./
+        restart: always
+        volumes:
+            - "~/.ssh:/home/user/.ssh:ro"
+        ports:
+            - "5555:5555"
